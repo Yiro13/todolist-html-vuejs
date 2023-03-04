@@ -1,0 +1,116 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+:root{
+    --checkbox-color: rgb(202, 60, 60);
+    --checkbox-shadow: rgba(238, 156, 167, 0.2);
+    --add-buton: rgb(255, 255, 255, 0.7);
+    --add-buton-shadow: rgba(238, 156, 167, 0.4);
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: 
+    linear-gradient(62deg, rgba(64, 172, 73, 0.973) 13%, rgba(129, 163, 34, 0.5) 4%),
+    linear-gradient(44deg, rgba(53, 134, 60, 0.973) 39%, rgba(122, 150, 45, 0.5) 18%),
+    linear-gradient(118deg, rgba(22, 133, 31, 0.973) 40%, rgba(136, 182, 10, 0.5) 54%),
+    linear-gradient(58deg, rgba(32, 102, 38, 0.973) 83%, rgba(79, 99, 25, 0.5) 23%);
+    background-blend-mode: normal, lighten, multiply, hard-light;
+    overflow: hidden;
+}
+
+input{
+    outline: none;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+.app-container {
+    max-width: 480px;
+    width: 100%;
+    max-height: 100%;
+    background-color: rgb(208, 208, 211);
+    padding: 25px;
+    border-radius: 25px;
+    overflow: auto;
+    color: rgb(29, 26, 28);
+}
+
+.app-header{
+    font-size: 30px;
+    line-height: 32px;
+    margin: 0 0 12px 0;
+    color: rgb(29, 26, 28);
+}
+
+.submit-task{
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    border: none;
+    background: var(--add-buton);
+    color:rgb(29, 26, 28);
+    background-image: url(mas.png);
+    background-size: 18px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 12 0 var(--add-buton-shadow);
+}
+
+.add-task{
+    height: 40px;
+    font-size: 14px;
+    display: flex;
+}
+
+.task-input{
+    width:  100%;
+    padding: 0 5px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(29, 26, 28);
+    background-color: transparent;
+    margin-right: 15px;
+    color: rgb(29, 26, 28);
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.task-input::placeholder{
+    color: rgb(29, 26, 28);
+}
+
+.task-list-item{
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 35px;
+    margin-bottom: 12px;
+}
+
+.delete-btn{
+    margin-left: auto;
+    margin-right: 5px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-image: url(basura.png);
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: center;
+    cursor: pointer;
+}

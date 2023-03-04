@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <title>Tareas</title>
+</head>
+<body>
+    <div class="app-container" id="tasklist">
+
+        <h1 class="app-header">Lista de tareas</h1>
+
+        <div class="add-task">
+
+            <input type="text" autocomplete="off" placeholder="Añade una tarea nueva" class="task-input" v-model="tasks.name" @keyup.enter="newItem">
+            <input type="submit" value="" title="" class="submit-task" @click="newItem">
+
+        </div>
+
+        <ul class="task-list">
+            <li class="task-list-item" v-for="task in tasks">
+                <label class="task-list-item-label">
+                    <input type="checkbox">
+                    <span>{{task.name}}</span>
+                </label>
+                <span class="delete-btn" title="Eliminar tarea" @click="delItem(task)">{{task.del}}</span>
+            </li>
+        </ul>
+
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
